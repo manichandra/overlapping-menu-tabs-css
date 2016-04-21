@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by manichandra (http://jsbin.com/gizuqe/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+body{
+  background:#eee;
+  font-family: Helvetica, Arial, sans-serif;
+}
+a{text-decoration:none;outline:none;}
+
+/* ROUNDED TABS BY Roko C.B. */
+
+.myTab li{
+  display:inline-block;
+  border-bottom:1px solid #0C83B4;
+  margin-left:-20px;
+}
+.myTab >ul > li > a{
+  color:#fff;
+  background:#0C83B4;
+  position:relative;
+  display:inline-block;
+  margin:0 22px;
+  padding:10px 15px;
+  text-shadow: 0 1px 0 rgba(0,2,0,0.4);
+  border-radius:7px 7px 0 0; /* just to smooth the top edges */
+}
+.myTab > ul > li  > a:before,
+.myTab > ul > li  > a:after{
+  content:" ";
+  position: absolute;
+  top:0;
+  width: 23px;
+  height: 100%;
+  background-color: inherit; 
+}
+.myTab >ul > li  > a:before{
+  border-radius: 12px 0 0 0;
+  transform: skew(-24deg);
+  left: -13px; /* play with this one to give the LI border ~2px extrusion */
+}
+.myTab >ul > li  > a:after{
+  border-radius: 0 12px 0 0;
+  transform: skew(24deg);
+  right: -13px; /* play with this one to give the LI border ~2px extrusion */
+  border-right: 1px solid #0C83B4;
+  z-index: 1; /* overlap next element */
+}
+/* LI ACTIVE  */
+.myTab > ul > li.active{
+   border-bottom:1px solid #fff;
+}
+.myTab >ul > li.active a{
+  color:#0C83B4;
+  background:#fff;
+}
+.myTab > ul > li.active a:before{
+  z-index: 1; /* overlap prev element */
+}
+.myTab > ul > li.active > a:after{
+   border-bottom:1px solid #fff;
+}
+
+ 
+
+</style>
+</head>
+<body>
+<nav class="myTab">
+    <ul>
+      <li><a href="javascript:;">Home</a></li>
+      <li class="active"><a href="javascript:;">About</a></li>
+      <li><a href="javascript:;">Products</a></li>
+      <li><a href="javascript:;">Map</a></li>
+      <li><a href="javascript:;">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
